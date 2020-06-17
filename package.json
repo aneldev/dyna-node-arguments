@@ -1,10 +1,10 @@
 {
   "name": "dyna-node-arguments",
-  "version": "0.0.1",
-  "description": "The dyna-node-arguments",
+  "version": "1.0.1",
+  "description": "Read simpler nodeJS complex command line arguments",
   "repository": {
     "type": "git",
-    "url": "http://github.com/YOUR_ACCOUNT/dyna-node-arguments"
+    "url": "http://github.com/aneldev/dyna-node-arguments"
   },
   "private": false,
   "sideEffects": false,
@@ -46,8 +46,13 @@
     "release": "yarn test && yarn run build && node dyna/updateChangeId.js && git add -u && git add -A && git commit -m \"Build\" && yarn version --patch && yarn run publish-push",
     "upgrade-release": "yarn upgrade && yarn run release"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "nodejs",
+    "command line",
+    "args",
+    "arguments"
+  ],
+  "author": "Anel.co",
   "license": "MIT",
   "dependencies": {},
   "devDependencies": {
