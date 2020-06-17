@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`buildArgsFromString Parse: "node build master.ts    --ENV_MODE    production     secure -- basics --TARGET mobile     android" 1`] = `
+Object {
+  "ENV_MODE": "production secure",
+  "TARGET": "mobile android",
+  "root": "node build master.ts basics",
+}
+`;
+
+exports[`buildArgsFromString Parse: "node build master.ts --ENV_MODE production -secure -- -verbose" 1`] = `
+Object {
+  "ENV_MODE": "production -secure",
+  "root": "node build master.ts -verbose",
+}
+`;
+
+exports[`buildArgsFromString Parse: "node build master.ts --ENV_MODE production secure -- basics --TARGET mobile android" 1`] = `
+Object {
+  "ENV_MODE": "production secure",
+  "TARGET": "mobile android",
+  "root": "node build master.ts basics",
+}
+`;
+
+exports[`buildArgsFromString Parse: "node build master.ts --ENV_MODE production secure --TARGET mobile android" 1`] = `
+Object {
+  "ENV_MODE": "production secure",
+  "TARGET": "mobile android",
+  "root": "node build master.ts",
+}
+`;
+
+exports[`buildArgsFromString Parse: "node build master.ts --ENV_MODE production secure" 1`] = `
+Object {
+  "ENV_MODE": "production secure",
+  "root": "node build master.ts",
+}
+`;
+
+exports[`buildArgsFromString Parse: "node build master.ts --ENV_MODE production" 1`] = `
+Object {
+  "ENV_MODE": "production",
+  "root": "node build master.ts",
+}
+`;
+
+exports[`buildArgsFromString Parse: "node build master.ts" 1`] = `
+Object {
+  "root": "node build master.ts",
+}
+`;
