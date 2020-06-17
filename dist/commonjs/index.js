@@ -1,7 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-// Export always from here for the types
-var Person_1 = require("./person/Person");
-exports.Person = Person_1.Person;
-console.error("\nmy-module: Import error\n    You should import \"my-module/dist/commonJs/web\" or \"my-module/dist/commonJs/node\" (with lazy load or not) according the runtime environment.\n    There is also am es version instead of commonJs, there imports are \"my-module/dist/esNext/web\" and \"my-module/dist/esNext/node\".\n    For typescript, you are free to import the types from \"my-module\" but functional code from \"web\" or \"node\" versions.\n");
+exports.dynaNodeArguments = void 0;
+var buildArgsFromString_1 = require("./buildArgsFromString");
+exports.dynaNodeArguments = buildArgsFromString_1.buildArgsFromString(process.argv.slice(1).join(' '));
 //# sourceMappingURL=index.js.map
