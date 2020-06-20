@@ -1,6 +1,6 @@
 {
   "name": "dyna-node-arguments",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Read simpler nodeJS complex command line arguments",
   "repository": {
     "type": "git",
