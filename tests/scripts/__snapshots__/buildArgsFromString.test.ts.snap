@@ -1,52 +1,92 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`buildArgsFromString Parse: "node build master.ts    --ENV_MODE    production     secure -- basics --TARGET mobile     android" 1`] = `
+exports[`buildArgsFromString Parse: "/Users/john/.nvm/versions/node/v12.16.1/bin/node myApp.js    --ENV_MODE    production     secure -- basics --TARGET mobile     android" 1`] = `
 Object {
-  "ENV_MODE": "production secure",
-  "TARGET": "mobile android",
-  "root": "node build master.ts basics",
+  "app": "myApp.js",
+  "args": Object {
+    "ENV_MODE": "production secure",
+    "TARGET": "mobile android",
+    "root": "basics",
+  },
+  "node": "/Users/john/.nvm/versions/node/v12.16.1/bin/node",
 }
 `;
 
-exports[`buildArgsFromString Parse: "node build master.ts --ENV_MODE production -secure -- -verbose" 1`] = `
+exports[`buildArgsFromString Parse: "/Users/john/.nvm/versions/node/v12.16.1/bin/node myApp.js --ENV_MODE production -secure -- -verbose" 1`] = `
 Object {
-  "ENV_MODE": "production -secure",
-  "root": "node build master.ts -verbose",
+  "app": "myApp.js",
+  "args": Object {
+    "ENV_MODE": "production -secure",
+    "root": "-verbose",
+  },
+  "node": "/Users/john/.nvm/versions/node/v12.16.1/bin/node",
 }
 `;
 
-exports[`buildArgsFromString Parse: "node build master.ts --ENV_MODE production secure -- basics --TARGET mobile android" 1`] = `
+exports[`buildArgsFromString Parse: "/Users/john/.nvm/versions/node/v12.16.1/bin/node myApp.js --ENV_MODE production secure -- basics --TARGET mobile android" 1`] = `
 Object {
-  "ENV_MODE": "production secure",
-  "TARGET": "mobile android",
-  "root": "node build master.ts basics",
+  "app": "myApp.js",
+  "args": Object {
+    "ENV_MODE": "production secure",
+    "TARGET": "mobile android",
+    "root": "basics",
+  },
+  "node": "/Users/john/.nvm/versions/node/v12.16.1/bin/node",
 }
 `;
 
-exports[`buildArgsFromString Parse: "node build master.ts --ENV_MODE production secure --TARGET mobile android" 1`] = `
+exports[`buildArgsFromString Parse: "/Users/john/.nvm/versions/node/v12.16.1/bin/node myApp.js --ENV_MODE production secure --TARGET mobile android" 1`] = `
 Object {
-  "ENV_MODE": "production secure",
-  "TARGET": "mobile android",
-  "root": "node build master.ts",
+  "app": "myApp.js",
+  "args": Object {
+    "ENV_MODE": "production secure",
+    "TARGET": "mobile android",
+    "root": "",
+  },
+  "node": "/Users/john/.nvm/versions/node/v12.16.1/bin/node",
 }
 `;
 
-exports[`buildArgsFromString Parse: "node build master.ts --ENV_MODE production secure" 1`] = `
+exports[`buildArgsFromString Parse: "/Users/john/.nvm/versions/node/v12.16.1/bin/node myApp.js --ENV_MODE production secure" 1`] = `
 Object {
-  "ENV_MODE": "production secure",
-  "root": "node build master.ts",
+  "app": "myApp.js",
+  "args": Object {
+    "ENV_MODE": "production secure",
+    "root": "",
+  },
+  "node": "/Users/john/.nvm/versions/node/v12.16.1/bin/node",
 }
 `;
 
-exports[`buildArgsFromString Parse: "node build master.ts --ENV_MODE production" 1`] = `
+exports[`buildArgsFromString Parse: "/Users/john/.nvm/versions/node/v12.16.1/bin/node myApp.js --ENV_MODE production" 1`] = `
 Object {
-  "ENV_MODE": "production",
-  "root": "node build master.ts",
+  "app": "myApp.js",
+  "args": Object {
+    "ENV_MODE": "production",
+    "root": "",
+  },
+  "node": "/Users/john/.nvm/versions/node/v12.16.1/bin/node",
 }
 `;
 
-exports[`buildArgsFromString Parse: "node build master.ts" 1`] = `
+exports[`buildArgsFromString Parse: "/Users/john/.nvm/versions/node/v12.16.1/bin/node myApp.js build --title Hello World --mode silent --title v2 -- verbose" 1`] = `
 Object {
-  "root": "node build master.ts",
+  "app": "myApp.js",
+  "args": Object {
+    "mode": "silent",
+    "root": "build verbose",
+    "title": "Hello World v2",
+  },
+  "node": "/Users/john/.nvm/versions/node/v12.16.1/bin/node",
+}
+`;
+
+exports[`buildArgsFromString Parse: "/Users/john/.nvm/versions/node/v12.16.1/bin/node myApp.js" 1`] = `
+Object {
+  "app": "myApp.js",
+  "args": Object {
+    "root": "",
+  },
+  "node": "/Users/john/.nvm/versions/node/v12.16.1/bin/node",
 }
 `;

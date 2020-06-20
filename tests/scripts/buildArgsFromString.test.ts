@@ -7,13 +7,14 @@ import { buildArgsFromString } from "../../src/buildArgsFromString";
 describe('buildArgsFromString', () => {
 
   [
-    'node build master.ts',
-    'node build master.ts --ENV_MODE production',
-    'node build master.ts --ENV_MODE production secure',
-    'node build master.ts --ENV_MODE production secure --TARGET mobile android',
-    'node build master.ts --ENV_MODE production secure -- basics --TARGET mobile android',
-    'node build master.ts    --ENV_MODE    production     secure -- basics --TARGET mobile     android',
-    'node build master.ts --ENV_MODE production -secure -- -verbose',
+    '/Users/john/.nvm/versions/node/v12.16.1/bin/node myApp.js',
+    '/Users/john/.nvm/versions/node/v12.16.1/bin/node myApp.js --ENV_MODE production',
+    '/Users/john/.nvm/versions/node/v12.16.1/bin/node myApp.js --ENV_MODE production secure',
+    '/Users/john/.nvm/versions/node/v12.16.1/bin/node myApp.js --ENV_MODE production secure --TARGET mobile android',
+    '/Users/john/.nvm/versions/node/v12.16.1/bin/node myApp.js --ENV_MODE production secure -- basics --TARGET mobile android',
+    '/Users/john/.nvm/versions/node/v12.16.1/bin/node myApp.js    --ENV_MODE    production     secure -- basics --TARGET mobile     android',
+    '/Users/john/.nvm/versions/node/v12.16.1/bin/node myApp.js --ENV_MODE production -secure -- -verbose',
+    '/Users/john/.nvm/versions/node/v12.16.1/bin/node myApp.js build --title Hello World --mode silent --title v2 -- verbose',
   ]
     .forEach(cli => {
       it(`Parse: "${cli}"`, () => {

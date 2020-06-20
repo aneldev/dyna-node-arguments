@@ -14,72 +14,89 @@ import {dynaNodeArguments} from "dyna-node-arguments"
 
 # Examples
 
-### command line: node build master.ts
-
-The `dynaNodeArguments` is:
-
+### command line: node myApp.js
 ``` 
 {
-  "root": "build master.ts",
+  "node": "/Users/john/.nvm/versions/node/v12.16.1/bin/node",
+  "app": "myApp.js",
+  "args": {
+    "root": "",
+  },
 }
 ``` 
 
-### command line: node build master.ts --ENV_MODE production
-
-The `dynaNodeArguments` is:
-
+### command line: node myApp.js --ENV_MODE production
 ``` 
 {
-  "root": "build master.ts",
-  "ENV_MODE": "production",
+  "node": "/Users/john/.nvm/versions/node/v12.16.1/bin/node",
+  "app": "myApp.js",
+  "args": {
+    "ENV_MODE": "production",
+    "root": "",
+  },
 }
 ``` 
 
-### command line: node build master.ts --ENV_MODE production secure
-
-The `dynaNodeArguments` is:
-
+### command line: node myApp.js --ENV_MODE production secure
 ``` 
 {
-  "root": "build master.ts",
-  "ENV_MODE": "production secure",
+  "node": "/Users/john/.nvm/versions/node/v12.16.1/bin/node",
+  "app": "myApp.js",
+  "args": {
+    "ENV_MODE": "production secure",
+    "root": "",
+  },
+}
+```
+
+### command line: node myApp.js --ENV_MODE production secure --TARGET mobile android
+``` 
+{
+  "node": "/Users/john/.nvm/versions/node/v12.16.1/bin/node",
+  "app": "myApp.js",
+  "args": {
+    "ENV_MODE": "production secure",
+    "TARGET": "mobile android",
+    "root": "",
+  },
 }
 ``` 
 
-### command line: node build master.ts --ENV_MODE production secure --TARGET mobile android
-
-The `dynaNodeArguments` is:
-
+### command line: node myApp.js --ENV_MODE production -secure -- -verbose
 ``` 
 {
-  "root": "build master.ts",
-  "ENV_MODE": "production secure",
-  "TARGET": "mobile android",
+  "node": "/Users/john/.nvm/versions/node/v12.16.1/bin/node",
+  "app": "myApp.js",
+  "args": {
+    "ENV_MODE": "production -secure",
+    "root": "-verbose",
+  },
 }
 ``` 
 
-### command line: node build master.ts --ENV_MODE production secure -- basics --TARGET mobile android
-
-The double dash in the middle it is used to define a value for the `root` variable/property.
-
-The `dynaNodeArguments` is:
-
+### command line: node myApp.js --ENV_MODE production secure -- basics --TARGET mobile android
 ``` 
 {
-  "root": "build master.ts basics",
-  "ENV_MODE": "production secure",
-  "TARGET": "mobile android",
+  "node": "/Users/john/.nvm/versions/node/v12.16.1/bin/node",
+  "app": "myApp.js",
+  "args": {
+    "ENV_MODE": "production secure",
+    "TARGET": "mobile android",
+    "root": "basics",
+  },
 }
 ``` 
 
-### command line: node build master.ts --ENV_MODE production -secure -- -verbose
-
-The `dynaNodeArguments` is:
-
+### command line: node myApp.js build --title Hello World --mode silent --title v2 -- verbose
 ``` 
-Object {
-  "root": "build master.ts -verbose",
-  "ENV_MODE": "production -secure",
+{
+  "node": "/Users/john/.nvm/versions/node/v12.16.1/bin/node",
+  "app": "myApp.js",
+  "args": {
+    "mode": "silent",
+    "root": "build verbose",
+    "title": "Hello World v2",
+  },
 }
 ``` 
 

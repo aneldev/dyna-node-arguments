@@ -1,12 +1,19 @@
 export interface IDynaNodeArguments {
-  root: string;
-
-  [flag: string]: string;
+  node: string;
+  app: string;
+  args: {
+    root: string;
+    [flag: string]: string;
+  };
 }
 
 export const buildArgsFromString = (cli: string): IDynaNodeArguments => {
-  const output: IDynaNodeArguments = {
-    root: '',
+  const dynaNodeArguments: IDynaNodeArguments = {
+    node: '',
+    app: '',
+    args: {
+      root: '',
+    },
   };
 
   let flag = 'root';
@@ -14,14 +21,25 @@ export const buildArgsFromString = (cli: string): IDynaNodeArguments => {
   cli
     .split(' ')
     .filter(Boolean)
-    .forEach(arg => {
-      if (arg.indexOf('--') === 0) {
-        flag = arg.substr(2) || 'root';
-        if (!output[flag]) output[flag] = '';
+    .forEach((arg, index) => {
+      if (index === 0) {
+        dynaNodeArguments.node = arg;
         return;
       }
-      output[flag] += `${output[flag] ? ' ' : ''}${arg.trim()}`;
+
+      if (index === 1) {
+        dynaNodeArguments.app = arg;
+        return;
+      }
+
+      if (arg.indexOf('--') === 0) {
+        flag = arg.substr(2) || 'root';
+        if (!dynaNodeArguments.args[flag]) dynaNodeArguments.args[flag] = '';
+        return;
+      }
+
+      dynaNodeArguments.args[flag] += `${dynaNodeArguments.args[flag] ? ' ' : ''}${arg.trim()}`;
     });
 
-  return output;
+  return dynaNodeArguments;
 };
