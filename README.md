@@ -4,7 +4,7 @@ Simplify the way you read nodeJS command line arguments.
 
 The double dash used to declare a variable and the rest are the values of the variable.
 
-The `ynaNodeArguments` is an object variable with values.
+The `dynaNodeArguments` is an object variable with values.
 
 # Import
 
